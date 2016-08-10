@@ -1,1 +1,2 @@
-# Problemset_accepted
+# Principle:
+··· 先思路后代码
