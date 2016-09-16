@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1471702254 source:/home/webstash/Problemset_accepted/腾讯2017暑期实习生编程题/3.cpp/main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<fstream>
+	<map>
+
