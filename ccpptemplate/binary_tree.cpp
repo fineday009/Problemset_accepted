@@ -76,7 +76,7 @@ vector<int> preOrderTraversal(TreeNode* root)
 	
 	st.push(root);
 	while(!st.empty()){
-		//访问根
+		//访问栈顶
 		TreeNode* tp=st.top();
 		ans.push_back(tp->val);
 		st.pop();
@@ -101,7 +101,7 @@ vector<int> inOrderTraversal(TreeNode* root)
 	}	
 
 	while(!st.empty()){
-		//访问根
+		//访问栈顶
 		TreeNode* tp=st.top();
 		ans.push_back(tp->val);
 		st.pop();
@@ -176,7 +176,7 @@ vector<vector<int> > levelOrder(TreeNode* root)
 	if(root==NULL) return vector<vector<int> >();
 	vector<vector<int> > ans;
 	vector<int> perline;
-	TreeNode* lastPerline=root;
+	TreeNode* lastNodePerline=root;
 	
 	queue<TreeNode*> q;
 	q.push(root);
@@ -189,10 +189,10 @@ vector<vector<int> > levelOrder(TreeNode* root)
 		if(front->left) q.push(front->left);
 		if(front->right) q.push(front->right);
 		
-		if(front==lastPerline){
+		if(front==lastNodePerline){
 			ans.push_back(perline);
 			perline.clear();
-			lastPerline=q.back();
+			lastNodePerline=q.back();
 		}
 	}
 	
@@ -282,7 +282,6 @@ int main(void)
             if(root)  
             {  
                 printf("非递归层序遍历二叉树：\n");  
-                //LeverTraverse(root);  
                 printTraversalAnswer2D(levelOrder(root));  
                 printf("\n");  
             }  
